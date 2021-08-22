@@ -21,8 +21,7 @@ export default class Message extends Component {
                            return (
                             <li key= {message.id}>
                             {/* <Link to={`/mingyu/home/messages/detail/${message.id}/${message.title}`}>{message.title}</Link>&nbsp;&nbsp; */}
-                            {/* <Link to={`/mingyu/home/messages/detail/?id=${message.id}&title=${message.title}`}>{message.title}</Link>&nbsp;&nbsp; */}
-                            <Link to={{pathname:'/mingyu/home/messages/detail', state:{id:message.id, title: message.title}}}>{message.title}</Link>&nbsp;&nbsp;
+                            <Link to={`/mingyu/home/messages/detail/?id=${message.id}&title=${message.title}`}>{message.title}</Link>&nbsp;&nbsp;
                           </li>
                            )
                        })
@@ -30,7 +29,7 @@ export default class Message extends Component {
                   </ul>
                   <hr />
                   {/* <Route path='/mingyu/home/messages/detail/:id/:title' component={Detail}/> */}
-                  <Route path='/mingyu/home/messages/detail' component={Detail}/>
+                  <Route path='/mingyu/home/messages/detail/' component={Detail}/>
 
             </div>
         )

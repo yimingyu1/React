@@ -11,15 +11,15 @@ const contents = [
 export default class Detail extends Component {
     render() {
         console.log(this.props);
-        // const {search} = this.props.location
-        // console.log(search);
-        const {id, title} = this.props.location.state
+        const {search} = this.props.location
+        console.log(search);
+        const {id, title} = qs.parse(search.slice(1))
         console.log(id, title);
         console.log(typeof id);
         
         const findReault = contents.find((contentObj)=>{
             console.log(typeof contentObj.id);
-            return id == contentObj.id
+            return id === contentObj.id
         })
         return (
             <div>
